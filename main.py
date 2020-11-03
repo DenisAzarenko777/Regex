@@ -41,10 +41,7 @@ for i in range(0,len(contacts_list),1):
                         some_list.append(patt2[1])
                     some_list.append(contacts_list[i][j])
             if j == 3:
-                if i == 3:
-                    some_list.append("ФСН")
-                else:
-                    some_list.append("СССР")
+                some_list.append(contacts_list[i][j])
             if j == 4:
                 some_list.append((contacts_list[i][j]))
             if j == 5:
