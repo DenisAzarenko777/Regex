@@ -36,7 +36,8 @@ for i in range(0,len(contacts_list),1):
                 else:
                     if len(patt2) == 2:
                         some_list.append(patt2[1])
-                    #some_list.append(contacts_list[i][j])
+                    else:
+                        some_list.append(contacts_list[i][j])
             if j == 3:
                 some_list.append(contacts_list[i][j])
             if j == 4:
@@ -48,6 +49,24 @@ for i in range(0,len(contacts_list),1):
     some_list2.append(some_list)
     some_list = []
 print(some_list2)
+firstname = ''
+sername = ''
+for element in some_list2:
+    for element2 in some_list2:
+        if element == element2:
+            #print(len(element))
+            #print(element)
+            continue
+        if element[0] == element2[0] and element[1] == element2[1]:
+            if element[3] == '':
+                element[3] = element2[3]
+            if element[4] == '':
+                element[4] = element2[4]
+            if element[5] == '':
+                element[5] = element2[5]
+            if element[6] == '':
+                element[6] = element2[6]
+            some_list2.remove((element2))
 
 
 
